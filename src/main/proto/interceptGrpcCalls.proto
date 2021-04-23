@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package br.com.tony;
+
+service InterceptGrpcCallsService {
+  rpc send (InterceptGrpcCallsRequest) returns (InterceptGrpcCallsReply) {}
+}
+
+message InterceptGrpcCallsRequest {
+  string name = 1;
+}
+
+message InterceptGrpcCallsReply {
+  string message = 1;
+}
